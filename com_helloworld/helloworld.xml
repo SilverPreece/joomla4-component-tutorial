@@ -10,7 +10,7 @@
     <copyright>John Smith</copyright>
     <license>GPL v3</license>
     <!--  The version string is recorded in the components table -->
-    <version>0.0.1</version>
+    <version>0.0.2</version>
     <!-- The description is optional and defaults to the name -->
     <description>
         A hello world component!
@@ -28,6 +28,11 @@
     this XML file is, the namespace must match (ignoring CamelCase). 
     -->
     <namespace path="src/">JohnSmith\Component\HelloWorld</namespace>
+
+    <files folder="site/">
+        <folder>src</folder>
+        <folder>tmpl</folder>
+    </files>
 
     <administration>
         <!-- The link that will appear in the Admin panel's "Components" menu -->
