@@ -1,5 +1,7 @@
 <?php
 
+use Joomla\CMS\Language\Text;
+
 /**
  * @package     Joomla.Administrator
  * @subpackage  com_helloworld
@@ -11,4 +13,4 @@
  // No direct access to this file
 defined('_JEXEC') or die('Restricted Access');
 ?>
-<h2>Hello world!</h2>
+<h2><?= Text::_('COM_HELLOWORLD_MSG_HELLO_WORLD') ?></h2>
