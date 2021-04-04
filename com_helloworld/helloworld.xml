@@ -10,7 +10,7 @@
     <copyright>John Smith</copyright>
     <license>GPL v3</license>
     <!--  The version string is recorded in the components table -->
-    <version>0.0.6</version>
+    <version>0.0.7</version>
     <!-- The description is optional and defaults to the name -->
     <description>
         A hello world component!
@@ -46,6 +46,7 @@
         <files folder="admin/">
             <folder>language</folder>
             <folder>services</folder>
+            <folder>sql</folder>
             <folder>src</folder>
             <folder>tmpl</folder>
         </files>
@@ -55,5 +56,21 @@
             <language tag="en-GB">admin/language/en-GB/en-GB.com_helloworld.sys.ini</language>
         </languages>
     </administration>
+
+    <install>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <uninstall>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+    <update>
+        <schemas>
+            <schemapath type="mysql">sql/updates/mysql</schemapath>
+        </schemas>
+    </update>
 
 </extension>
